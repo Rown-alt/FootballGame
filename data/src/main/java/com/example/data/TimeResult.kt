@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "results")
 data class TimeResult (
     @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name = "result_name") val recordName: String,
-    @ColumnInfo(name = "result_time") val recordTime: String
+    @ColumnInfo(name = "result_name") val resultName: String,
+    @ColumnInfo(name = "result_time") val resultTime: String
 )

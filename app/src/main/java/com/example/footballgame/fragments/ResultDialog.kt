@@ -6,6 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.commit
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.example.footballgame.R
 import com.example.footballgame.databinding.ResultDialogBinding
 import com.example.footballgame.viewModels.SaveResultViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -29,11 +33,13 @@ class ResultDialog: DialogFragment() {
             val time = binding.time.text.toString()
             if (name!=""){
                 viewModel.saveResult(name, time)
+                val action = GameFragmentDirections.actionGameFragmentToMenuFragment()
+                findNavController().navigate(action)
+                dialog?.dismiss()
             }
             else{
                 Toast.makeText(requireContext(), "Enter your name, please", Toast.LENGTH_SHORT).show()
             }
-            viewModel.getResults()
         }
         return binding.root
     }

@@ -1,5 +1,7 @@
 package com.example.footballgame.viewModels
 
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.data.TimeResult
@@ -7,11 +9,12 @@ import com.example.data.TimeResultDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class SaveResultViewModel(private val timeResultDao: TimeResultDao): ViewModel() {
-    fun saveResult(name: String, time: String){
+class ResultViewModel(private val timeResultDao: TimeResultDao): ViewModel() {
+    val results= MutableLiveData<List<TimeResult>>()
+
+    fun getResults(){
         viewModelScope.launch(Dispatchers.IO) {
-            val result = TimeResult(0, name, time)
-            timeResultDao.insert(result)
+            results.postValue(timeResultDao.getAll())
         }
     }
 }
