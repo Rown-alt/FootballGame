@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">FootballGame</string>
+    <string name="start">Start</string>
+    <string name="result">Result</string>
+    <string name="politic">Politic</string>
+    <string name="quit">Quit</string>
+    <string name="exit_text">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="your_score">Your score</string>
+    <string name="save">Save</string>
+    <string name="enter_your_name">Enter your name</string>
 </resources>

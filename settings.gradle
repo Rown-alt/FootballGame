@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "FootballGame"
 include ':app'
+include ':data'
