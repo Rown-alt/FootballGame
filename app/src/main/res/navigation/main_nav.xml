@@ -12,6 +12,7 @@
             android:id="@+id/action_gameFragment_to_menuFragment"
             app:destination="@id/menuFragment"
             app:launchSingleTop="true"
+            app:popUpTo="@id/main_nav"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
