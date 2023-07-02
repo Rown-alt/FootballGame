@@ -7,6 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+<!--    так как не вектор, пришлось сделать картинку на весь экран-->
+<!--    и поставить ее как бэкграунд-->
     <ImageView
         android:id="@+id/ball_image"
         android:src="@drawable/ball_animation"
@@ -19,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--    вью, по нажатию на которое будет происходить увеличение мяча-->
     <View
         android:id="@+id/ball"
         android:layout_width="190dp"
@@ -34,7 +38,7 @@
         android:layout_height="85dp"
         android:layout_marginTop="30dp"
         android:scaleType="fitXY"
-        android:src="@drawable/time_bg"
+        android:src="@drawable/white_rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

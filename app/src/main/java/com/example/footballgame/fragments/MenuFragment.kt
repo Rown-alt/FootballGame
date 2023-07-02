@@ -30,7 +30,6 @@ class MenuFragment: Fragment() {
             it.findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToPoliticFragment())
         }
         binding.quitBtn.setOnClickListener{
-//            requireActivity().finishAffinity()
             val dialog = ExitDialog()
             dialog.show(activity!!.supportFragmentManager, "EXIT_DIALOG")
         }
